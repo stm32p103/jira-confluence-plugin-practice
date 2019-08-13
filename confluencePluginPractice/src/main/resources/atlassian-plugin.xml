@@ -20,5 +20,11 @@
 
         <context>confluencePluginPractice</context>
     </web-resource>
-    
+
+    <!-- add our web resources -->
+    <xhtml-macro name="idContainer" class="com.stm32p103.plugin.macro.idcontainer" key='idcontainer-macro'>
+	    <description key="idcontainer"/>
+	    <category name="formatting"/>
+    <parameters/>
+</xhtml-macro>
 </atlassian-plugin>
