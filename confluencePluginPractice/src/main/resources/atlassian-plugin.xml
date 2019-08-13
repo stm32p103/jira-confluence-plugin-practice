@@ -1,4 +1,4 @@
-<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+﻿<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
     <plugin-info>
         <description>${project.description}</description>
         <version>${project.version}</version>
@@ -11,7 +11,7 @@
     <resource type="i18n" name="i18n" location="confluencePluginPractice"/>
     
     <!-- add our web resources -->
-    <web-resource key="confluencePluginPractice-resources" name="confluencePluginPractice Web Resources">
+    <web-resource key="${atlassian.plugin.key}-resources" name="${project.name} Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
         <resource type="download" name="confluencePluginPractice.css" location="/css/confluencePluginPractice.css"/>
@@ -21,10 +21,10 @@
         <context>confluencePluginPractice</context>
     </web-resource>
 
-    <!-- add our web resources -->
-    <xhtml-macro name="idContainer" class="com.stm32p103.plugin.macro.idcontainer" key='idcontainer-macro'>
-	    <description key="idcontainer"/>
-	    <category name="formatting"/>
-    <parameters/>
-</xhtml-macro>
+    <!-- add macro -->
+    <xhtml-macro name="id-bearer" class="com.stm32p103.plugin.macro.idbearer" key="id-bearer">
+	    <description key="ページ内で要素を区別する要素。">ページ内で要素を区別するためのIDを提供する。</description>
+	    <category name="development"/>
+    	<parameters/>
+		</xhtml-macro>
 </atlassian-plugin>

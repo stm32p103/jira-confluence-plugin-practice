@@ -7,15 +7,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.stm32p103.plugin</groupId>
     <artifactId>confluencePluginPractice</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>Stm32p103</name>
+        <url>https://qiita.com/stm32p103</url>
     </organization>
 
-    <name>confluencePluginPractice</name>
-    <description>This is the com.stm32p103.plugin:confluencePluginPractice plugin for Atlassian Confluence.</description>
+    <name>練習用Confluenceプラグイン</name>
+    <description>Confluenceプラグインの練習。</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
