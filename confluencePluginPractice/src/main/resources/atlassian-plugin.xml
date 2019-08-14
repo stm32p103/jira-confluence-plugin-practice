@@ -16,15 +16,17 @@
         
         <resource type="download" name="confluencePluginPractice.css" location="/css/confluencePluginPractice.css"/>
         <resource type="download" name="confluencePluginPractice.js" location="/js/confluencePluginPractice.js"/>
-        <resource type="download" name="images/" location="/images"/>
+   			<resource type="download" name="images/" location="/images"/>
 
         <context>confluencePluginPractice</context>
     </web-resource>
 
     <!-- add macro -->
-    <xhtml-macro name="IDコンテナ" class="com.stm32p103.plugin.macro.idcontainer" key="id-container">
-	    <description key="マクロIDで識別したい要素を囲む。">マクロIDでページ内の要素を区別できるようにする要素。</description>
-	    <category name="development"/>
-    	<parameters/>
-		</xhtml-macro>
+    <xhtml-macro name="ID Container" 
+								 class="com.stm32p103.plugin.macro.IdContainer"
+                 key="id-container">
+      <description>マクロIDでページ内の要素を区別できるようにする要素。プレビューで「レンダリング中にエラーが発生しました null 」と表示されるのは原因が分からない。</description>
+      <category name="development"/>
+      <parameters/>
+    </xhtml-macro>
 </atlassian-plugin>
