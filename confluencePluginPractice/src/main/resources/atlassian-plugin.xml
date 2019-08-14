@@ -1,4 +1,4 @@
-﻿<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
     <plugin-info>
         <description>${project.description}</description>
         <version>${project.version}</version>
@@ -22,8 +22,8 @@
     </web-resource>
 
     <!-- add macro -->
-    <xhtml-macro name="id-bearer" class="com.stm32p103.plugin.macro.idbearer" key="id-bearer">
-	    <description key="ページ内で要素を区別する要素。">ページ内で要素を区別するためのIDを提供する。</description>
+    <xhtml-macro name="IDコンテナ" class="com.stm32p103.plugin.macro.idcontainer" key="id-container">
+	    <description key="マクロIDで識別したい要素を囲む。">マクロIDでページ内の要素を区別できるようにする要素。</description>
 	    <category name="development"/>
     	<parameters/>
 		</xhtml-macro>

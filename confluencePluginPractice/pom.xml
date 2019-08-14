@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.stm32p103.plugin</groupId>
     <artifactId>confluencePluginPractice</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <organization>
         <name>Stm32p103</name>
