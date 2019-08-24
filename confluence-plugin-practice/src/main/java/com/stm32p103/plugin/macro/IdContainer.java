@@ -14,14 +14,10 @@ public class IdContainer implements Macro {
     MacroDefinition macroDefinition = (MacroDefinition) conversionContext.getProperty("macroDefinition");
 
     // id取得: https://community.atlassian.com/t5/Answers-Developer-Questions/How-to-get-Confluence-macro-id-on-execute/qaq-p/474165
-    String macroId = "";
-
-		if( macroDefinition != null ) {
-			macroId = macroDefinition.getMacroId().get().getId();
-		}
-
+    String macroId = macroDefinition.getMacroId().get().getId();
+    
     // idを設定しt<id-container>タグで本文(body)を囲む。
-    return "<id-container id=\"" + macroId + "\">" + body + "</id-container>";
+    return "<id-container id=\"" + macroId + "\" key=\"" + map.get( "key" ) + "\" >" + body + "</id-container>";
   }
   public BodyType getBodyType() {
     // NONE: マクロの内側がない

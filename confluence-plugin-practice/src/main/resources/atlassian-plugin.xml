@@ -1,0 +1,41 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="confluence-plugin-practice"/>
+    
+    <!-- add our web resources -->
+    <!-- リソースは "/download/resources/${project.groupId}.${project.artifactId}:<web-resourceのkey>/<resourceのname属性>" で参照できる -->
+    <web-resource key="resources" name="${project.name} Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="confluence-plugin-practice.css" location="css/confluence-plugin-practice.css"/>
+        <resource type="download" name="confluence-plugin-practice.js" location="js/confluence-plugin-practice.js"/>
+  		<resource type="download" name="images/" location="images"/>
+        <context>page</context>
+        <context>confluence-plugin-practice</context>
+    </web-resource>
+
+    <!-- add macro -->
+    <xhtml-macro name="ID Container" class="com.stm32p103.plugin.macro.IdContainer" key="id-container" icon="/download/resources/${project.groupId}.${project.artifactId}:resources/images/icon.png">
+        <description>idで要素を区別できるようにするための要素。内側にも内容を追加できる。プレビューで「レンダリング中にエラーが発生しました null 」と表示される、key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
+        <category name="development"/>
+        <parameters>
+            <parameter name="key" type="string" required="false" default="" multiple="false"></parameter>
+        </parameters>
+    </xhtml-macro>
+    
+    <!-- add macro -->
+    <xhtml-macro name="ID Element" class="com.stm32p103.plugin.macro.IdElement" key="id-element" icon="/download/resources/${project.groupId}.${project.artifactId}:resources/images/icon.png">
+        <description>idで要素を区別できるようにするための要素。Javascriptで内容を追加して使う。key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
+        <category name="development"/>
+        <parameters>
+            <parameter name="key" type="string" required="true" default="" multiple="false"></parameter>
+        </parameters>
+    </xhtml-macro>
+</atlassian-plugin>

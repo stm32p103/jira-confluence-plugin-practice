@@ -1,0 +1,1 @@
+﻿const specialVariable = 1000;
