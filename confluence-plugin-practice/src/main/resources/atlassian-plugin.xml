@@ -26,6 +26,7 @@
         <description>idで要素を区別できるようにするための要素。内側にも内容を追加できる。プレビューで「レンダリング中にエラーが発生しました null 」と表示される、key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
         <category name="development"/>
         <parameters>
+            <parameter name="tag" type="string" required="true" default="" multiple="false"></parameter>
             <parameter name="key" type="string" required="false" default="" multiple="false"></parameter>
         </parameters>
     </xhtml-macro>
@@ -35,6 +36,7 @@
         <description>idで要素を区別できるようにするための要素。Javascriptで内容を追加して使う。key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
         <category name="development"/>
         <parameters>
+            <parameter name="tag" type="string" required="true" default="" multiple="false"></parameter>
             <parameter name="key" type="string" required="true" default="" multiple="false"></parameter>
         </parameters>
     </xhtml-macro>
