@@ -16,10 +16,10 @@ public class IdElement implements Macro {
     // id取得: https://community.atlassian.com/t5/Answers-Developer-Questions/How-to-get-Confluence-macro-id-on-execute/qaq-p/474165
     String macroId = macroDefinition.getMacroId().get().getId();
     String tag = map.get( "tag" );
-    String key = map.get( "key" );
+    String option = map.get( "option" );
     
     // idを設定しt<id-container>タグで本文(body)を囲む。
-    return "<" + tag + " id=\"" + macroId + "\" key=\"" + key + "\" ></" + tag + ">";
+    return "<" + tag + " id=\"" + macroId + "\" option=\"" + option + "\" ></" + tag + ">";
   }
   public BodyType getBodyType() {
     // NONE: マクロの内側がない

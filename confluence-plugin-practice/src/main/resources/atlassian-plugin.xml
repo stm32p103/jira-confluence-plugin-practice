@@ -23,21 +23,21 @@
 
     <!-- add macro -->
     <xhtml-macro name="ID Container" class="com.stm32p103.plugin.macro.IdContainer" key="id-container" icon="/download/resources/${project.groupId}.${project.artifactId}:resources/images/icon.png">
-        <description>idで要素を区別できるようにするための要素。内側にも内容を追加できる。プレビューで「レンダリング中にエラーが発生しました null 」と表示される、key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
+        <description>idで要素を区別できるようにするための要素。内側にも内容を追加できる。プレビューで「レンダリング中にエラーが発生しました null 」と表示される、マクロの設定し直しができないという問題はあるが、使用上影響なし。</description>
         <category name="development"/>
         <parameters>
             <parameter name="tag" type="string" required="true" default="" multiple="false"></parameter>
-            <parameter name="key" type="string" required="false" default="" multiple="false"></parameter>
+            <parameter name="option" type="string" required="false" default="" multiple="false"></parameter>
         </parameters>
     </xhtml-macro>
     
     <!-- add macro -->
     <xhtml-macro name="ID Element" class="com.stm32p103.plugin.macro.IdElement" key="id-element" icon="/download/resources/${project.groupId}.${project.artifactId}:resources/images/icon.png">
-        <description>idで要素を区別できるようにするための要素。Javascriptで内容を追加して使う。key属性の再設定ができないという問題はあるが、使用上影響なし。</description>
+        <description>idで要素を区別できるようにするための要素。Javascriptで内容を追加して使う。マクロの設定し直しができないという問題はあるが、使用上影響なし。</description>
         <category name="development"/>
         <parameters>
             <parameter name="tag" type="string" required="true" default="" multiple="false"></parameter>
-            <parameter name="key" type="string" required="true" default="" multiple="false"></parameter>
+            <parameter name="option" type="string" required="true" default="" multiple="false"></parameter>
         </parameters>
     </xhtml-macro>
 </atlassian-plugin>
